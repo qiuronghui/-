@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相邻兄弟元素margin重叠问题</title>
+</head>
+<body>
+    <p>ABC</p>
+    <p>abc</p>
+
+    <div>解决办法，在p外面包裹一层容器
+        并触发该容器生成一个BFC。
+        那么两个P便不属于同一个BFC，
+        就不会发生margin重叠了。
+    </div>
+    <p class="p1">ABC</p>
+    <div class="wrap"></div>
+    <p class="p1">abc</p>
+    <style>
+        p{
+            color: maroon;
+            background-color: yellow;
+            width: 200px;
+            line-height: 100px;
+            text-align: center;
+            margin: 100px;
+        }
+        .p1{
+            
+            color: maroon;
+            background-color: yellow;
+            width: 200px;
+            line-height: 100px;
+            text-align: center;
+            margin: 100px;
+        
+        }
+        .wrap{
+            overflow: hidden;
+        }
+    </style>
+</body>
+</html>

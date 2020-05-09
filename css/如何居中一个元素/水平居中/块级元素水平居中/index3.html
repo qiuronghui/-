@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 使用absolute+transform
+先将父元素设置为相对定位，再将子元素设置为绝对定位，向右移动子元素，移动距离为父容器的一半，最后通过向左移动子元素的一半宽度以达到水平居中。 -->
+    <div class="parent">
+        <div class="child">demo</div>
+    </div>
+    <style>
+        .child{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .parent{
+            position: relative;
+        }
+    </style>
+</body>
+</html>

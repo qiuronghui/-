@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log(fun)
+    
+        console.log(person)
+    </script>
+    
+    <script>
+        console.log(person)
+    
+        console.log(fun)
+    
+        var person = "Eric";
+    
+        console.log(person)
+    
+        function fun() {
+
+            console.log(person)//undefined 因为函数做定义了不是全局作用域中
+            var person = "Tom";
+            console.log(person)
+        }
+    
+        fun()
+    
+        console.log(person)
+        /*
+        第一段script代码直接报错
+        */
+    </script>
+</body>
+</html>

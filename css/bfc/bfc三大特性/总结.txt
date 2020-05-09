@@ -1,0 +1,7 @@
+float为 left|right
+overflow为 hidden|auto|scroll
+display为 table-cell|table-caption|inline-block|inline-flex|flex
+position为 absolute|fixed
+根元素
+
+如何创建bfc

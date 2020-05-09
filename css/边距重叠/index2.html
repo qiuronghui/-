@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="parent">
+        <div class="child1">children1</div>
+    </div>
+    <div>父子边界折叠
+        原因是如果块元素的 margin-top 与它的第一个子元素的margin-top 之间没有
+         border、padding、inline content、 clearance 来分隔，或者块元素的
+          margin-bottom 与它的最后一个子元素的margin-bottom 之间没有
+           border、padding、inline content、height、min-height、 max-height 
+           分隔，那么外边距会塌陷。子元素多余的外边距会被父元素的外边距截断。
+    </div>
+    <style>
+        .parent{
+            /* width: 500px; */
+            /* height: 500px; */
+            /* margin: auto; */
+            /* border: 2px dashed yellow; */
+            background-color: indianred;
+        }
+        .child1{
+            width: 200px;
+            height: 200px;
+            border: 2px dashed green;
+            background-color: lightblue;
+            margin-top: 20px;
+        }
+    
+    </style>
+</body>
+</html>

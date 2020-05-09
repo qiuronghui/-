@@ -1,0 +1,5 @@
+1. 定宽 margin：0 auto;
+2. display:table; margin: 0 auto;
+3.父相子绝 子向右left：50%； transform：translateX(-50%)
+4.display: flex;justify-content: center;
+5.父display:flex;子margin:0 auto;

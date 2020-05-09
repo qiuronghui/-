@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 如果块级元素内部包着也是一个块级元素，
+    我们可以先将其由块级元素改变为行内块元素，
+    再通过设置行内块元素居中以达到水平居中。 -->
+    <div class="parent">
+        <div class="child">demo</div>
+    </div>
+    <style>
+        .parent{
+            text-align: center;
+        }
+        .child{
+            display: inline-block;
+        }
+    </style>
+</body>
+</html>

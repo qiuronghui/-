@@ -1,0 +1,11 @@
+1.绝对定位与负边距实现（已知高度宽度）
+
+2.绝对定位与margin:auto(已知宽度)
+
+3.绝对定位+css3（未知元素的高宽）
+
+4.flex布局
+ justify-content:center
+ align-items:center
+
+5.flex/gird 与 margin:auto

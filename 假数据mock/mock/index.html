@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>http-server 假数据</div>
+    <script src="https://unpkg.com/mockjs"></script>
+    <script src="https://unpkg.com/jquery"></script>
+    <script>
+        //劫持请求 ,返回假数据
+        Mock.mock('/users','get',{
+            hello:'mock.js'
+        })
+        $.get('/users',function(res){
+            console.log(res)
+        })
+        $.get('/products',function(res){
+            console.log(res)
+        })
+    </script>
+</body>
+</html>

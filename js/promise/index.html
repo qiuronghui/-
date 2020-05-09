@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.bootcss.com/bluebird/3.5.1/bluebird.min.js"></script>
+      <script type="text/javascript">
+        function loadImg(src) {
+            var promise = new Promise(function (resolve, reject) {
+                var img = document.createElement('img')
+                img.onload = function () {
+                    resolve(img)
+                }
+                img.onerror = function () {
+                    reject('图片加载失败')
+                }
+                img.src = src
+            })
+            return promise
+        }
+        var src = 'https://www.imooc.com/static/img/index/logo_new.png'
+        var result = loadImg(src)
+        result.then(function (img) {
+            console.log(1, img.width)
+            return img
+        }, function () {
+            console.log('error 1')
+        }).then(function (img) {
+            console.log(2, img.height)
+        })
+     </script>
+</head>
+<body>
+    
+</body>
+</html>
